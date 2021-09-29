@@ -1,3 +1,5 @@
+![CI](https://github.com/ant1k9/formatter/workflows/tests/badge.svg)
+
 ### Formatter
 
 💠 Use formatter to customize the output of your programs.

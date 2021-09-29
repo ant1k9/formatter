@@ -15,7 +15,7 @@ fn usage() {
 }
 
 fn run(cfg: &pprint::FormatterConfig) {
-    if cfg.cmd == "" {
+    if cfg.cmd.is_empty() {
         println!("no command provided");
         return;
     }
@@ -70,10 +70,10 @@ fn main() {
             }
             _ => {
                 let next = args[arg_idx].to_string();
-                if cfg.cmd == "" && next.starts_with("-") {
+                if cfg.cmd.is_empty() && next.starts_with('-') {
                     println!("improper command line argument {}", next);
                     return;
-                } else if cfg.cmd == "" {
+                } else if cfg.cmd.is_empty() {
                     cfg.cmd = next;
                 } else {
                     cfg.args.push(next);
