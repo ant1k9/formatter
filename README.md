@@ -7,5 +7,5 @@
 ```
 $ cargo install --path .
 $ formatter --help
-$ formatter --header "┏━" --prefix "┃ " --footer "┗━" ls
+$ formatter --header "┏━┓" --prefix "┃ " --suffix " ┃" --footer "┗━┛" ls
 ```
