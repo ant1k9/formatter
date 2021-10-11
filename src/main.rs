@@ -5,13 +5,14 @@ use std::process::Command;
 
 
 fn usage() {
-    println!("Usage:\n  formatter <options> command args...\n\nOptions:");
-    println!("  --prefix       - prefix for every line");
-    println!("  --suffix       - suffix for every line");
-    println!("  --header       - header for the whole output");
-    println!("  --footer       - footer for the whole output");
-    println!("  --line-breaker - line breaker between output lines");
-    println!("  --width        - fix width for every line");
+    println!(
+"Usage:\n  formatter <options> command args...\n\nOptions:
+  --prefix       - prefix for every line
+  --suffix       - suffix for every line
+  --header       - header for the whole output
+  --footer       - footer for the whole output
+  --line-breaker - line breaker between output lines
+  --width        - fix width for every line");
 }
 
 fn run(cfg: &pprint::FormatterConfig) {
@@ -34,7 +35,7 @@ fn run(cfg: &pprint::FormatterConfig) {
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() == 1 {
-        println!("no commands provided");
+        println!("no command provided");
         return;
     }
 
